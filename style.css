@@ -323,14 +323,15 @@ span {
     margin-bottom: 3rem;
 }
 
-.contact form .inputbox {
+.contact form .inputbox ,
+.contact form .YourMessage {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .contact form .inputbox input,
-.contact form .inputbox textarea {
+.contact form .YourMessage input {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -344,7 +345,9 @@ span {
 .contact form .inputbox input {
     width: 49%;
 }
-
+ .YourMessage input {
+    width: 100%;
+}
 .contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
