@@ -8,6 +8,7 @@
   <title>Adhil Sakheer</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -120,8 +121,8 @@
   <!--contact page design-->
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
-    <form id="gform" method="POST"
-      action="https://script.google.com/macros/s/AKfycbzXfRwPKsZupeHscSrbvJ2NXjn6XxtXfjov_egWstxjCW1RJ_B06XhijtlEU4cYkpOR/exec">
+    <form id="submit-form"
+      action="">
       <div class="inputbox">
         <input type="text" name="Full Name" placeholder="Full Name">
         <input type="email" name="Email Address" placeholder="Email Address">
@@ -150,6 +151,25 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="pf.js"></script>
+  <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzXfRwPKsZupeHscSrbvJ2NXjn6XxtXfjov_egWstxjCW1RJ_B06XhijtlEU4cYkpOR/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
