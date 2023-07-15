@@ -8,7 +8,7 @@
   <title>Adhil Sakheer</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 </head>
 
 <body>
@@ -44,7 +44,7 @@
       <a href="#" class="btn">Download CV</a>
     </div>
     <div class="home-img" style="margin-left: 2rem;">
-      <img style="border-radius: 20rem;border:.2rem solid var(--main-color);
+      <img style="border-radius: 20rem;border:.2rem solid var(--main-color);"
       <img style=" height: 30vw; width: 30vw; border-radius: 20rem;border:.2rem solid var(--main-color);"
         src="images/main.jpg" alt=>
     </div>
@@ -121,8 +121,7 @@
   <!--contact page design-->
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
-    <form id="submit-form"
-      action="">
+    <form id="gform"  action="https://formsubmit.co/adhilsakheer@gmail.com" method="POST">
       <div class="inputbox">
         <input type="text" name="Full Name" placeholder="Full Name">
         <input type="email" name="Email Address" placeholder="Email Address">
@@ -134,8 +133,9 @@
 
       </div>
       <div class="YourMessage">
-        <input type="text" name="Your Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="text" name="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
       </div>
+      <input type="hidden" name="_captcha" value="false">
       <input type="submit" value="Send Message" class="btn">
     </form>
   </section>
@@ -151,7 +151,9 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="pf.js"></script>
-  <script>
+  <!--<script>
+    $(document).ready(function() {
+    
         $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
@@ -169,7 +171,8 @@
                 }
             })
         })
-    </script>
+      });
+    </script> -->
 </body>
 
 </html>
